@@ -41,6 +41,7 @@ public class AdaSteps {
 
     @Then("search results related to {string} should be displayed")
     public void resultsDisplayed(String keyword) {
+        System.out.println("adding another comment at line 44 to create conflict");
         Assert.assertTrue(searchResultsPage.hasResults() || searchResultsPage.pageMentions(keyword));
     }
 
@@ -51,6 +52,7 @@ public class AdaSteps {
 
     @Then("the login form should be displayed")
     public void loginFormDisplayed() {
+        System.out.println("adding 3rd statement without conflict");
         Assert.assertTrue(loginPage.isLoginFormDisplayed(), "Login form not displayed");
     }
 
