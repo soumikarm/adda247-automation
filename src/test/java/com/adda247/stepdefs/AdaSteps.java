@@ -41,6 +41,7 @@ public class AdaSteps {
 
     @Then("search results related to {string} should be displayed")
     public void resultsDisplayed(String keyword) {
+        System.out.println("added print statement at line 44 to check merge conflict" );
         System.out.println("adding another comment at line 44 to create conflict");
         Assert.assertTrue(searchResultsPage.hasResults() || searchResultsPage.pageMentions(keyword));
     }
